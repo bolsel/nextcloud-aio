@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   annotations:
     kompose.cmd: kompose convert -c -f latest.yml --namespace "{{ .Values.NAMESPACE }}"
-    kompose.version: 1.34.0 (cbf2835db)
+    kompose.version: 1.35.0 (9532ceef3)
   labels:
     io.kompose.service: nextcloud-aio-nextcloud
   name: nextcloud-aio-nextcloud
@@ -19,7 +19,7 @@ spec:
     metadata:
       annotations:
         kompose.cmd: kompose convert -c -f latest.yml --namespace "{{ .Values.NAMESPACE }}"
-        kompose.version: 1.34.0 (cbf2835db)
+        kompose.version: 1.35.0 (9532ceef3)
       labels:
         io.kompose.service: nextcloud-aio-nextcloud
     spec:
@@ -173,7 +173,7 @@ spec:
               value: "{{ .Values.WHITEBOARD_ENABLED }}"
             - name: WHITEBOARD_SECRET
               value: "{{ .Values.WHITEBOARD_SECRET }}"
-          image: "nextcloud/aio-nextcloud:20241106_101604"
+          image: nextcloud/aio-nextcloud:20241216_102930
           name: nextcloud-aio-nextcloud
           ports:
             - containerPort: 9000
